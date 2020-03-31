@@ -1,0 +1,17 @@
+.Panel {
+    border: 1px solid rgb(100,149,237);
+}
+
+.Panel-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgb(100,149,237);
+    background-color: rgb(33, 199, 33);
+    padding: 7px 10px;
+    text-align: left;
+}
+
+.Panel-content {
+    padding: 7px 10px;
+    text-align: left;
+}
