@@ -7,7 +7,7 @@ class Panel extends Component {
         return(
             <div className="Panel">
                 <h4 className="Panel-title">{this.props.title}</h4>
-                <div className="Panel-content">{this.props.content}</div>
+                <div className="Panel-content">{this.props.children}</div>
             </div>
         )
     }

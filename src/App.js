@@ -1,15 +1,23 @@
 import React from 'react';
-import Panel from './Panel'
+import Wikipedia from './Wikipedia'
 import './App.css';
+
+import {HashRouter, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <HashRouter>
+        <div>
+          <Route path="/Wikipedia" component={Wikipedia} />
         
-        <h1>Meine tolle Webseite</h1>
-<Panel title="Überschrift" content="Inhalt" />
-      </header>
+        </div>
+      </HashRouter>
+        
+        
+
+  
+     
     </div>
   );
 }
