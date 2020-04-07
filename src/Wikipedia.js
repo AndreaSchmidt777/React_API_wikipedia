@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Panel from './Panel'
+import {Redirect} from 'react-router';
+
 
 class Wikipedia extends Component {
 
@@ -7,7 +9,8 @@ class Wikipedia extends Component {
     super(props);
 
         this.state = {
-            searchText: ""
+            searchText: "",
+            searchButtonClicked:false
         }
         this.onTextChange = this.onTextChange.bind(this);
         this.onSearchSubmit = this.onSearchSubmit.bind(this);
@@ -22,12 +25,20 @@ class Wikipedia extends Component {
     }
 
     onSearchSubmit() {
+        this.setState(
+            {
+                searchButtonClicked: true
+            }
+        )
 
     }
 
     render() {
         return(
 <Panel title="Wikipedia">
+    {(this.state.searchButtonClicked == true ? (
+    <Redirect to={"/Wikipedia-Results/" + this.state.searchText} />
+    ): null)}
     <input type="text"
     value={this.state.searchText}
     onChange={this.onTextChange} />
