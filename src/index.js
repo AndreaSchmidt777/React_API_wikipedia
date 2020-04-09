@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import App from './components/App';
+import TodoList from './components/TodoList';
+import Wikipedia from './components/Wikipedia';
+import Navigation from './components/Navigation';
+import WikipediaResults from './components/WikipediaResults';
+import Home from './components/Home';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux';
+import { incrementCounter } from './actions/index';
+import counter from './reducers/index';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { HashRouter, Route } from 'react-router-dom';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let store = createStore(counter);
+console.log(store.getState());
+
+ReactDOM.render(
+  <Provider store={store}>
+    <HashRouter>
+      <div>
+        <Navigation />
+
+        <Route exact={true} path="/" component={Home} />
+        <Route path="/click" component={App} />
+        <Route path="/todo" component={TodoList} />
+        <Route path="/wikipedia" component={Wikipedia} />
+        <Route path="/wikipedia-results/:search" component={WikipediaResults} />
+      </div>
+    </HashRouter>
+  </Provider>,
+  document.getElementById('root')
+);
