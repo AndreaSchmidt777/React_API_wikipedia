@@ -6,8 +6,7 @@ import Wikipedia from './components/Wikipedia';
 import Navigation from './components/Navigation';
 import WikipediaResults from './components/WikipediaResults';
 import Home from './components/Home';
-import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
+import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 import { incrementCounter } from './actions/index';
 import counter from './reducers/index';
@@ -15,7 +14,7 @@ import './index.css';
 
 import { HashRouter, Route } from 'react-router-dom';
 
-let store = createStore(counter, applyMiddleware(thunkMiddleware));
+let store = createStore(counter);
 console.log(store.getState());
 
 ReactDOM.render(
