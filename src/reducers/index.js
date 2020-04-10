@@ -9,6 +9,7 @@ let reduce = combineReducers({
     todos: todos,
     wikipedia: wikipedia 
 })
+
 /*
 function reduce(state, action) {
     if (state === undefined) {

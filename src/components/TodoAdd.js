@@ -43,8 +43,8 @@ class TodoAdd extends Component {
     }
 }
 
-/*TodoAdd.propTypes = {
+TodoAdd.propTypes = {
     onAdd: React.PropTypes.func.isRequired
-}*/
+}
 
 export default TodoAdd;

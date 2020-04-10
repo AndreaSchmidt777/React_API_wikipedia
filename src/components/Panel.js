@@ -16,9 +16,9 @@ class Panel extends Component {
     }
 }
 
-/*Panel.propTypes = {
+Panel.propTypes = {
     /** Der Titel vom Panel */
-   /* title: React.PropTypes.string.isRequired
-}*/
+    title: React.PropTypes.string.isRequired
+}
 
 export default Panel;
