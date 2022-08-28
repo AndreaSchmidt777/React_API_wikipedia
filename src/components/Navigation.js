@@ -13,10 +13,10 @@ class Navigation extends Component {
                     <Link to="/todo">TODO ({this.props.todoCount})</Link>
                 </li>
                 <li>
-                    <Link to="/click">Klickzähler ({this.props.counter})</Link>
+                    <Link to="/click">Klickzähler Andrea ({this.props.counter})</Link>
                 </li>
                   <li>
-                    <Link to="/wikipedia">Wikipedia</Link>
+                    <Link to="/wikipedia">Wikipedia umgebaut</Link>
                 </li>
             </ul>
         )
