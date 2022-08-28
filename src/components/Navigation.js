@@ -10,7 +10,7 @@ class Navigation extends Component {
                     <Link to="/">Startseite</Link>
                 </li>
                 <li>
-                    <Link to="/todo">TODO ({this.props.todoCount})</Link>
+                    <Link to="/todo">TODO 12 ({this.props.todoCount})</Link>
                 </li>
                 <li>
                     <Link to="/click">Klickzähler ({this.props.counter})</Link>
